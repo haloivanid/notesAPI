@@ -7,12 +7,17 @@ const app = express.Router()
 //* Defining delete routes
 app.delete('/notes', (req, res) => {
     const id = req.query.id
-
-    if (db.remove(id)) {
-        res.status(202).send('OK')
+    if (id) {
+        if (db.remove(id)) {
+            res.status(202).send('OK')
+        }
+        else {
+            res.status(404).send(`Not Found: ID ${id} hasn't been declared in the db`)
+        }
     }
     else {
-        res.status(404).send(`Not Found: ID ${id} hasn't been declared in the db`)
+        db.removeAll()
+        res.status(202).send('OK')
     }
 })
 

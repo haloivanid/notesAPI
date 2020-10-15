@@ -23,7 +23,7 @@ app.get('/notes/*', (_, res) => {
 })
 
 // START APP
-const port = 3000
+const port = 9876
 app.listen(port, () => {
   console.log(`server is listening on http://localhost:${port}`);
 })
