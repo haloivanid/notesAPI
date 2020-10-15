@@ -6,7 +6,8 @@ const app = express.Router()
 
 //* Defining get routes
 app.get('/notes', (req, res) => {
-    const id = req.query.id
+    const query = req.query
+    const id = query.id
     const result = db.get(id)
     if (result) {
         res.status(200).send(result)
