@@ -78,11 +78,18 @@ function remove(id) {
     }
 }
 
+function removeAll() {
+    db.get('notes')
+        .remove({})
+        .write()
+}
+
 const functions = {
     get,
     add,
     edit,
-    remove
+    remove,
+    removeAll
 }
 
 module.exports = functions
