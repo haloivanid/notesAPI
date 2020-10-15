@@ -3,8 +3,6 @@ const db = require('../controller/dbController')
 
 const app = express.Router()
 
-// TODO 2. cut all of db codes for getting data to dbController and make a get function with it
-// TODO 6. use db get function
 
 //* Defining get routes
 app.get('/notes', (req, res) => {

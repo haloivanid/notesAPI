@@ -4,7 +4,6 @@ const db = require('../controller/dbController')
 const app = express.Router()
 
 
-
 //* Defining edit/patch routes
 app.patch('/notes', (req, res) => {
     const body = req.body

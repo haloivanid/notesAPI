@@ -3,9 +3,6 @@ const db = require('../controller/dbController')
 
 const app = express.Router()
 
-// TODO 3. uncomment the route handler 
-// TODO 3. cut all of db codes for adding data to dbController and make a add function with it
-// TODO 7. use db add function
 
 // //* Defining post routes
 app.post('/notes', (req, res) => {

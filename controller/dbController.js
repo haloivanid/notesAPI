@@ -7,8 +7,6 @@ const db = low(adapter)
 db.defaults({ notes: [] })
     .write()
 
-// TODO 1. comment out all the route handler inside their file EXECPT the GET handler
-// TODO 5. export all of created function by exporting an object
 function get(id) {
     let result
     if (id) {
